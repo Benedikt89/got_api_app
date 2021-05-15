@@ -1,17 +1,11 @@
 import {AppStateType} from "../store";
-//
-// export const selectListsArr = (state: AppStateType): I_listType[] => {
-//   let res:I_listType[] = [];
-//   Object.keys(state.data.list).forEach((key: string) => res.push(state.data.list[key] as I_listType));
-//   return res;
-// };
+import {DataPayloadType, DataType} from "../../types/data-types";
 
-export const selectList = (state: AppStateType, listId: string): any => {
-  return state.data.persons[listId] as any;
+export const selectListsArr = (state: AppStateType, dataType: DataType): DataPayloadType[] => {
+  let res:DataPayloadType[] = [];
+  Object.keys(state.data[dataType]).forEach((key: string) => res.push(state.data[dataType][key] as DataPayloadType));
+  return res;
 };
-//
-// export const selectUser = (state: AppStateType, userId: string): I_User | null =>
-//   isUser(state.data.user[userId]);
-//
-// export const selectTicketByKey = (state: AppStateType, key: string): I_ticket | null =>
-//   !!state.data.ticket[key] ? state.data.ticket[key] as I_ticket : null;
+
+export const selectDataByKey = (state: AppStateType, dataType: DataType, key: string): DataPayloadType | null =>
+  !!state.data[dataType][key] ? state.data[dataType][key] as DataPayloadType : null;

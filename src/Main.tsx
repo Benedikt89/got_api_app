@@ -6,6 +6,7 @@ import {AppStateType} from "./redux/store";
 import {fetchData} from "./redux/data/actions";
 import AppHeader from "./components/Header/Header";
 import ProtectedRoute from "./components/common/ProtectedRoute";
+import {DataType, PaginatorProps} from "./types/data-types";
 
 interface I_props {}
 
@@ -15,7 +16,7 @@ interface I_connectedProps {
 }
 
 interface I_dispatchedProps {
-  fetchData: () => void
+  fetchData: (dataType: DataType, paginatorProps?: PaginatorProps) => void
 }
 
 interface I_MainProps extends I_props, I_connectedProps, I_dispatchedProps {}
@@ -33,7 +34,10 @@ class Main extends Component<I_MainProps, I_MainState> {
   }
 
   componentDidMount() {
-    this.props.fetchData();
+    console.log('AAAAAAAAAAAAAA')
+    this.props.fetchData('books');
+    this.props.fetchData('characters');
+
   }
 
   render() {
