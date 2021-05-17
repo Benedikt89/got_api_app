@@ -2,6 +2,7 @@
   "name": "got_api_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://benedikt89.github.io/got_api_app",
   "dependencies": {
     "@ant-design/dark-theme": "^2.0.2",
     "@craco/craco": "^6.1.1",
