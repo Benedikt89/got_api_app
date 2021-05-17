@@ -11,6 +11,9 @@ export const initialState:I_DataState = {
   books: {},
   characters: {},
   houses: {},
+  query: {
+    pageSize: '10',
+  },
   ids: {
     books: [],
     characters: [],
@@ -38,7 +41,6 @@ const dataReducer = (state: I_DataState = initialState, action: AppActionsType):
         _paginate: {...state._paginate, [action._dataType]: action.paginate}
       };
     }
-    //delete data
     case dataActionTypes.SET_MENTIONED_DATA_ITEM: {
       if (state[action._dataType][action.data.id] || !action.data.id) {
         return state;
@@ -50,6 +52,9 @@ const dataReducer = (state: I_DataState = initialState, action: AppActionsType):
           [action.data.id]: action.data
         }
       };
+    }
+    case dataActionTypes.SET_LAST_QUERY: {
+      return {...state, query: action.data}
     }
     default:
       return state;

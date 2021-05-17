@@ -11,25 +11,31 @@ import {Spin} from "antd";
 import TableRenderer from "./TableRenderer";
 import Paginator from "../common/Paginator";
 import FiltersBar from "../common/FiltersBar";
+import {QueryObject} from "../../types/app-types";
 
 interface ComponentProps {
   _dataType: DataType
 }
 
 export const DataTableWrapper: React.FC<ComponentProps> = ({_dataType}) => {
-  const {dataArray, loading, paginate} = useSelector((state: AppStateType) => ({
+  const {dataArray, loading, paginate, pageSize} = useSelector((state: AppStateType) => ({
     paginate: selectPaginateByKey(state, _dataType),
     dataArray: selectPageData(state, _dataType),
-    loading: selectFetchingByKey(state, `fetchAllData=${_dataType}`)
+    loading: selectFetchingByKey(state, `fetchAllData=${_dataType}`),
+    pageSize: state.data.query.pageSize
   }));
 
   const columns = useMemo(() => selectTableColumns(_dataType), [_dataType]);
 
   const dispatch = useDispatch();
 
-  const fetchData = useCallback((url?: string, query?: string) => {
-    dispatch(fetchDataThunk(_dataType, url || '', query));
-  }, [_dataType]);
+  const fetchData = useCallback((url?: string, query?: QueryObject) => {
+    dispatch(fetchDataThunk(_dataType, url || '', query || {}));
+  }, [_dataType, dispatch]);
+
+  const setPageSizeCallback = useCallback((pageSize: string) => {
+    fetchData('', {pageSize});
+  }, [fetchData]);
 
   useEffect(() => {
     fetchData();
@@ -41,7 +47,12 @@ export const DataTableWrapper: React.FC<ComponentProps> = ({_dataType}) => {
       <Spin spinning={loading}>
         <FiltersBar onConfirm={(query) => fetchData('', query)} />
         <TableRenderer columns={columns} dataArray={dataArray} />
-        <Paginator onClick={fetchData} paginate={paginate} />
+        <Paginator
+          onClick={fetchData}
+          paginate={paginate}
+          setPageSize={setPageSizeCallback}
+          pageSize={pageSize || '10'}
+        />
       </Spin>
     </div>
   )

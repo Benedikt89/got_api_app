@@ -74,4 +74,5 @@ export type I_DataState = {
   readonly ids: {
     readonly [key in DataType]: string[]
   }
+  readonly query:{ [key: string]: string }
 }

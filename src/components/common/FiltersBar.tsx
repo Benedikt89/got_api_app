@@ -1,13 +1,13 @@
 import * as React from "react";
 import {useState} from "react";
 import {Button, Input, Select} from "antd";
-import {stringifyQuery} from "../../constants/queryHelpers";
 import {CloseCircleOutlined} from '@ant-design/icons';
 
 import "./common.css";
+import {QueryObject} from "../../types/app-types";
 
 interface FiltersBarComponentProps {
-  onConfirm: (query: string) => void
+  onConfirm: (query: QueryObject) => void
 }
 
 const genderOptions = [
@@ -36,14 +36,14 @@ const FiltersBar: React.FC<FiltersBarComponentProps> = React.memo(({onConfirm}) 
         {genderOptions.map(opt => <Select.Option key={opt.value} value={opt.value}>{opt.title}</Select.Option>)}
       </Select>
       <Button className="action-bar-item"
-              onClick={() => onConfirm(stringifyQuery({gender, culture: filter}))}
+              onClick={() => onConfirm({gender, culture: filter})}
       >
         Apply
       </Button>
       <CloseCircleOutlined className="action-bar-item"  onClick={() => {
         setFilter('');
         setGender('');
-        onConfirm('');
+        onConfirm({});
       }}/>
     </div>
   )

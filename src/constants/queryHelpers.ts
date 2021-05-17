@@ -11,7 +11,6 @@ export const parseQuery = (query: string): QueryObject => {
   return res;
 };
 export const stringifyQuery = (queryObj?: QueryObject):string => {
-  console.log(queryObj)
   if (!queryObj || !Object.keys(queryObj).length) return '';
   let res: string[] = [];
   Object.keys(queryObj).forEach(key => {

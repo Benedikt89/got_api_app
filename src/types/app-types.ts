@@ -4,5 +4,5 @@ export interface I_appState {
 }
 
 export type QueryObject = {
-    [key: string]: string | number
+    [key: string]: string
 }
