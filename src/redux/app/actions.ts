@@ -1,18 +1,13 @@
-import {I_UserData} from "../../types/app-types";
 
 export const appActionTypes: {
   SET_IS_FETCHING: 'app/SET_IS_FETCHING'
   SET_ERROR: 'app/SET_ERROR'
-  SET_LANGUAGE: 'app/SET_LANGUAGE'
-  SET_USER_DATA: 'app/SET_USER_DATA'
 } = {
   SET_IS_FETCHING: 'app/SET_IS_FETCHING',
   SET_ERROR: 'app/SET_ERROR',
-  SET_LANGUAGE: 'app/SET_LANGUAGE',
-  SET_USER_DATA: 'app/SET_USER_DATA'
 };
 
-export type I_appActions = I_setFetching | I_setError | I_setUserData
+export type I_appActions = I_setFetching | I_setError
 
 //interfaces
 interface I_setFetching {
@@ -25,11 +20,6 @@ interface I_setError {
   key: string
   message: null | string
 }
-interface I_setUserData {
-  type: typeof appActionTypes.SET_USER_DATA,
-  data: null | I_UserData
-}
-
 
 //Internal ACTIONS CREATORS
 export const _setFetching = (key: string, status: boolean): I_setFetching =>

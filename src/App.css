@@ -112,7 +112,16 @@
   border-color: #555 transparent transparent transparent;
 }
 
-
+.text-ellipsis {
+  white-space: nowrap;
+  text-align: initial;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.data-title {
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
 @media (min-width: 1151px) {
   .container {
     max-width: 1100px;

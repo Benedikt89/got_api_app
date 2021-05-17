@@ -2,12 +2,20 @@ import {dataActionTypes} from "./actions";
 import {AppActionsType} from "../store";
 import {I_DataState, DataPayloadType} from "../../types/data-types";
 
-export const newTicketId = '_NEW_TICKET';
-
-const initialState:I_DataState = {
+export const initialState:I_DataState = {
+  _paginate: {
+    books: null,
+    characters: null,
+    houses: null,
+  },
   books: {},
   characters: {},
   houses: {},
+  ids: {
+    books: [],
+    characters: [],
+    houses: [],
+  }
 };
 
 const dataReducer = (state: I_DataState = initialState, action: AppActionsType): I_DataState => {
@@ -15,29 +23,33 @@ const dataReducer = (state: I_DataState = initialState, action: AppActionsType):
     //adding fetched data
     case dataActionTypes.SET_FETCHED_DATA: {
       let newState = {...state};
+      let ids: string[] = [];
       action.data.forEach((d: DataPayloadType) => {
-        newState[action.dataType][d.id] = d;
+        newState[action._dataType][d.id] = d;
+        ids.push(d.id);
       });
+      newState.ids = {...newState.ids, [action._dataType]: ids};
       return newState;
     }
     //merge common data with existing or create new
-    case dataActionTypes.UPDATE_ITEM_SUCCESS: {
-      let newState = {...state};
-      if (newState[action.dataType][action.data.id]) {
-        newState[action.dataType][action.data.id] = {
-          ...newState[action.dataType][action.data.id],
-          ...action.data
-        };
-      } else {
-        newState[action.dataType][action.data.id] = action.data;
-      }
-
-      return newState;
+    case dataActionTypes.SET_PAGINATE_DATA: {
+      return {
+        ...state,
+        _paginate: {...state._paginate, [action._dataType]: action.paginate}
+      };
     }
     //delete data
-    case dataActionTypes.DELETE_DATA_SUCCESS: {
-      let newState = {...state};
-      return newState;
+    case dataActionTypes.SET_MENTIONED_DATA_ITEM: {
+      if (state[action._dataType][action.data.id] || !action.data.id) {
+        return state;
+      }
+      return {
+        ...state,
+        [action._dataType]: {
+          ...state[action._dataType],
+          [action.data.id]: action.data
+        }
+      };
     }
     default:
       return state;

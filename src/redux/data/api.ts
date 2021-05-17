@@ -1,15 +1,24 @@
 import {DataPayloadType, DataType, PaginatorProps} from "../../types/data-types";
 import axios from "axios";
-import {getPaginateFromHeaders, getUrl} from "../../constants/api-url";
+import {getDataIdFromUrl, getPaginateFromHeaders, getUrl} from "../../constants/api-url";
 
 export const dataAPI = {
-  getData: async (dataType: DataType, paginator?: PaginatorProps): Promise<never | DataPayloadType[]> => {
+  getPageData: async (_dataType: DataType, link: string, query: string)
+    : Promise<never | {data: DataPayloadType[], paginate: PaginatorProps}> => {
     let result: DataPayloadType[] = [];
-    let url = getUrl(dataType);
-    console.log(url);
+    let url = link ? link : getUrl(_dataType) + query;
     const res = await axios.get(url);
     const paginate = getPaginateFromHeaders(res.headers.link);
-    console.log(dataType + '=========>', res);
-    return result;
+    if (res.data) {
+      result = res.data.map((item: any) => ({...item, id: getDataIdFromUrl(item.url), _dataType}))
+    }
+    return {data: result, paginate};
+  },
+  getDataItem: async (link: string): Promise<never | DataPayloadType | null> => {
+    const res = await axios.get(link);
+    if (res.data) {
+      return  res.data;
+    }
+    return null;
   }
 };

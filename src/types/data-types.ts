@@ -1,6 +1,6 @@
 export type DataType = 'books' | 'characters' | 'houses'
 export type DataPayloadType = BookType | CharacterType | HouseType
-export type PaginatorKeys = 'next' |'first' |'last';
+export type PaginatorKeys = 'next' |'first' |'last' | 'prev';
 
 export type PaginatorProps = {
   [key in PaginatorKeys]: string
@@ -28,7 +28,7 @@ export type CharacterType = DefaultDataType & {
   "povBooks": string[],
   "tvSeries": string[],
   "playedBy": string[]
-}
+} & {[key: string]: string | string[]}
 
 export type BookType = DefaultDataType & {
   authors: string[],
@@ -42,7 +42,7 @@ export type BookType = DefaultDataType & {
   publisher: string,
   released: string,
   url: string,
-}
+} & {[key: string]: string | string[]}
 
 export type HouseType = DefaultDataType & {
   "url": string,
@@ -61,10 +61,17 @@ export type HouseType = DefaultDataType & {
   "ancestralWeapons": string[],
   "cadetBranches": string[],
   "swornMembers": string[]
-}
+} & {[key: string]: string | string[]}
 
 export type I_DataState = {
   readonly [key in DataType]: {
     [key: string]: DataPayloadType
+  }
+} & {
+  readonly _paginate: {
+    readonly [key in DataType]: PaginatorProps | null
+  }
+  readonly ids: {
+    readonly [key in DataType]: string[]
   }
 }

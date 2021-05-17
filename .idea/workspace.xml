@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b63446ae-2d31-4d9b-82b1-b1ae4ea51ebf" name="Default Changelist" comment="initial commit">
+    <list default="true" id="b63446ae-2d31-4d9b-82b1-b1ae4ea51ebf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/__tests__/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__tests__/Main.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DescriptionPage/DescriptionPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/DataTableWrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/TableRenderer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/FiltersBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/ItemTitle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/__tests__/Paginator.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/__tests__/RenderItemTitle.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/queryHelpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/tableColums.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/app/__tests__/reducer.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/data/__tests__/reducer.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/ProtectedRoute.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/api-url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/api-url.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/app/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/app/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/app/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/app/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/app/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/app/selectors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/data/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/data/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/data/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/data/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/data/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/data/reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/data/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/data/selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/app-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/app-types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/data-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data-types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/typeHelpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/typeHelpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +43,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="347" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -32,10 +63,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/__tests__" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Users\User\WebstormProjects\got_api_app\node_modules\typescript\lib" />
@@ -45,11 +77,11 @@
       <recent name="C:\dev\training\got_api_app\src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\got_api_app\src\components\common\__tests__" />
+      <recent name="C:\Users\User\WebstormProjects\got_api_app\src\redux\data\__tests__" />
+      <recent name="C:\Users\User\WebstormProjects\got_api_app" />
+      <recent name="C:\Users\User\WebstormProjects\got_api_app\src" />
       <recent name="C:\dev\training\got_api_app\src" />
-      <recent name="C:\dev\training\got_api_app\src\components" />
-      <recent name="C:\dev\training\got_api_app" />
-      <recent name="C:\dev\training\got_api_app\src\redux" />
-      <recent name="C:\dev\training\got_api_app\src\types" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -65,6 +97,56 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.npm start">
+    <configuration name="App.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/App.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/Main.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Paginator.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/components/common/__tests__/Paginator.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="reducer.test.js (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/redux/app/__tests__/reducer.test.js" />
+      <method v="2" />
+    </configuration>
+    <configuration name="reducer.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/redux/data/__tests__/reducer.test.js" />
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -78,6 +160,15 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Main.test.js" />
+        <item itemvalue="Jest.App.test.js" />
+        <item itemvalue="Jest.reducer.test.js (1)" />
+        <item itemvalue="Jest.Paginator.test.js" />
+        <item itemvalue="Jest.reducer.test.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -95,8 +186,19 @@
       <workItem from="1620981285239" duration="1132000" />
       <workItem from="1620984684662" duration="3264000" />
       <workItem from="1621028463761" duration="805000" />
-      <workItem from="1621038407593" duration="2406000" />
+      <workItem from="1621038407593" duration="2666000" />
+      <workItem from="1621084604982" duration="7483000" />
+      <workItem from="1621217537253" duration="14493000" />
+      <workItem from="1621232185775" duration="5562000" />
     </task>
+    <task id="LOCAL-00001" summary="some universal typing">
+      <created>1621041076194</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621041076194</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +219,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="some universal typing" />
+    <option name="LAST_COMMIT_MESSAGE" value="some universal typing" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/got_api_app$Main_test_js.info" NAME="Main.test.js Coverage Results" MODIFIED="1621234626648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/got_api_app$App_test_js.info" NAME="App.test.js Coverage Results" MODIFIED="1621234611117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/got_api_app$reducer_test_js.info" NAME="reducer.test.js Coverage Results" MODIFIED="1621234523876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/got_api_app$Paginator_test_js.info" NAME="Paginator.test.js Coverage Results" MODIFIED="1621234556289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/got_api_app$reducer_test_js__1_.info" NAME="reducer.test.js (1) Coverage Results" MODIFIED="1621234581725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="JestJavaScriptTestRunnerCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

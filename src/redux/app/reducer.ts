@@ -4,10 +4,9 @@ import {
 import {I_appState} from "../../types/app-types";
 import {AppActionsType} from "../store";
 
-const initialState: I_appState = {
+export const initialState: I_appState = {
   isFetching: {},
   error: {},
-  userData: null
 };
 
 
@@ -44,18 +43,6 @@ const appReducer = (state: I_appState = initialState, action: AppActionsType):I_
         };
       } else return state;
     }
-
-    /* ====================
-      set user data, or null when log out
-     ==================== */
-
-    case appActionTypes.SET_USER_DATA: {
-      return {
-        ...state,
-        userData: action.data
-      };
-    }
-
     default:
       return state;
   }

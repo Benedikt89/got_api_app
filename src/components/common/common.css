@@ -78,3 +78,13 @@
 .ant-form-item {
     margin-bottom: 0!important;
 }
+.action-bar {
+    display: flex;
+    flex-direction: row;
+    padding: 0.7rem 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.action-bar-item {
+    margin-left: 1rem;
+}
